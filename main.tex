@@ -1,0 +1,69 @@
+% document layout
+\documentclass[12pt, a4paper]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{subfiles}
+
+% text options
+\usepackage[T1]{fontenc}
+\usepackage[spanish]{babel}
+
+% headers and footers
+\usepackage{fancyhdr}
+
+% math extensions
+\usepackage{mathtools}
+\usepackage{physics}
+\usepackage{siunitx}
+\sisetup{per-mode=fraction}
+
+% content layout
+\usepackage{float}
+\usepackage{booktabs}
+
+% external imports
+\usepackage{graphicx}
+
+% bibliography
+\usepackage{csquotes}
+\usepackage[style=authoryear]{biblatex}
+\addbibresource{res/bfi01.bib}
+
+\begin{document}
+\subfile{parts/0cover}
+
+% custon header and footer setup
+\pagestyle{fancy}
+\fancyfoot{} % clear all footer fields
+\fancyfoot[L]{Facultad de Ciencias - UNI}
+\fancyfoot[R]{\thepage}
+
+\tableofcontents
+\clearpage
+
+\section{Objetivos}
+\subfile{parts/1objectives}
+
+\section{Marco teórico}
+\subfile{parts/2theory}
+
+\section{Equipo utilizado}
+\subfile{parts/3equipment}
+
+\section{Procedimientos}
+\subfile{parts/4procedures}
+
+\section{Tablas de datos}
+\subfile{parts/5tables}
+
+\section{Cálculos y resultados}
+\subfile{parts/6results}
+
+\section{Discusiones}
+\subfile{parts/7discussion}
+
+\section{Conclusiones}
+\subfile{parts/8conclusion}
+
+\section{Bibliografía}
+\printbibliography
+\end{document}
